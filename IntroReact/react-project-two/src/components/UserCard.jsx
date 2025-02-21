@@ -1,12 +1,12 @@
 import React from 'react'
 import ironman from '../assets/ironman.jpeg'
 import './UserCard.css'
-const UserCard = () => {
+const UserCard = (props) => {
   return (
-    <div className='user-container'>
-        <p id='user-name'>Aayush</p>
-        <img id='user-img' src={ironman} alt='ironman'/>
-        <p id='user-desc'>I am ironman!</p>
+    <div className='user-container' style={props.style}>
+        <p id='user-name'>{props.name}</p>
+        <img id='user-img' src={props.image} alt={props.name}/>
+        <p id='user-desc'>{props.desc}</p>
       
     </div>
   )
